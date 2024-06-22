@@ -76,9 +76,9 @@ class Knight(Character):
             self.frame = 0
 
         if self.left:
-            self.attack_range = pygame.rect.Rect((self.rect.x, self.rect.y), (self.rect.width / 2, self.rect.height))
+            self.attack_range = pygame.rect.Rect((self.rect.x, self.rect.y), (self.rect.width / 3, self.rect.height))
         else:
-            self.attack_range = pygame.rect.Rect((self.rect.centerx + self.rect.width / 2, self.rect.y), (self.rect.width / 2, self.rect.height),)
+            self.attack_range = pygame.rect.Rect((self.rect.centerx + 2 * self.rect.width / 3, self.rect.y), (self.rect.width / 2, self.rect.height),)
 
         if self.movex < 0:  # canot use else because what about self.movex = 0
             self.image = self.images[self.frame // ANI]
